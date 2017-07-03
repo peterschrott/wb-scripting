@@ -6,6 +6,7 @@
 # E.g.:  remove-old-backups.sh 3
 #
 #
+cd ${BASH_SOURCE%/*}
 set -e
 if [ "$#" -ne 1 ]; then
 cat << EOF

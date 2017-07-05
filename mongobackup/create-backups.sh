@@ -9,14 +9,16 @@
 #
 cd ${BASH_SOURCE%/*}
 set -e
+export PATH=/usr/local/bin/:$PATH
+
 if [ "$#" -ne 1 ]; then
 cat << EOF
 Creates a new mongodb backups using mongo tools
 
 Usage: create-backups.sh backupName
-E.g.:  create-backups.sh  1491483133533
+E.g.:  create-backups.sh 1491483133533
 
-Recommended backupName: $(date +%s%N | cut -b1-13)
+Recommended backupName: $(date +\%s\%N | cut -b1-13)
 EOF
     exit
 fi

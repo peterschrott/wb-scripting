@@ -8,6 +8,8 @@
 #
 cd ${BASH_SOURCE%/*}
 set -e
+export PATH=/usr/local/bin/:$PATH
+
 if [ "$#" -ne 1 ]; then
 cat << EOF
 Removes old mongodb backups without deleting the latest X backups.

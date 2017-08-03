@@ -39,7 +39,7 @@ mongo --port 27017 -u "adminUser" -p "YEURhcq63BhAQBB7" --authenticationDatabase
 for db_to_backup in `cat $_DATABASES_TO_BACKUP`
 do
   echo " * creating backup for: $db_to_backup"
-  mongodump --port 27017 -u "adminUser" -p "YEURhcq63BhAQBB7" --authenticationDatabase "admin" -d $db_to_backup -o $_TARGET_FOLDER_NAME -v
+  mongodump --port 27017 -u "adminUser" -p "YEURhcq63BhAQBB7" --authenticationDatabase "admin" -d $db_to_backup -o $_TARGET_FOLDER_NAME -v --gzip
 done
 
 echo ""
